@@ -10,18 +10,21 @@ $(document).ready(function(){
           '<div class="messages rightgreen">' + NewMessage + '<span class="time">' + ora.getHours() + ':' + ora.getMinutes() + '</span>' + '</div>' + '<div class="clearfix">' + '</div>'
         );
         $(this).val('');
+        window.setTimeout(function(){
+          $('.rightcontainer').append(
+            '<div class="messages leftwhite">' + 'Ok!' + '<span class="time">' + ora.getHours() + ':' + ora.getMinutes() + '</span>' + '</div>' + '<div class="clearfix">' + '</div>'
+          );
+        },1000);
       }
     }
   });
 
   $('#button').click(function(){
     var researched = $('#cerca').val()
-    for (var i = 1; i < 6; i++) {
-      num = i
-      var string = $('#' + num).html();
-      console.log(string)
+    for (var i = 1; i < 7; i++) {
+      var string = $('#' + i).html();
       if (string.search(researched)>=0) {
-        $('#' + num).parent().parent().removeClass('noresult');
+        $('#' + i).parent().parent().removeClass('noresult');
       }
     }
     $('.noresult').hide();
