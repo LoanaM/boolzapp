@@ -28,20 +28,33 @@ body {
   float: left;
   width: 70%;
   height: 100%;
-  background-color: brown;
+  background-image: url('https://www.nokioteca.net/home/forum/uploads/gallery/album_195/gallery_490268_195_152710.jpg');
+  position: relative;
 }
 .menu {
   background-color: #eee;
   width: 100%;
   height: 60px;
-  border: 0.3px solid grey;
+  border: 0.3px solid lightgrey;
 }
-footer {
+.footer {
   position: absolute;
-  top: 300px;
-  background-color: yellow;
-  z-index: 200;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+.footer input {
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+.fafooter {
+  color: grey;
+}
+
 #notifications {
   width: 100%;
   height: 80px;
@@ -63,13 +76,13 @@ footer {
   position: relative;
   background-color: white;
 }
-.fa {
+#lens {
   color: lightgrey;
   position: relative;
   margin-left: 4px;
   margin-top: 6px;
 }
-input {
+.searchboard input {
   width: 90%;
   height: 30px;
   position: absolute;
@@ -92,4 +105,20 @@ input {
 .preview {
   margin-left: 5px;
   font-family: arial;
+}
+
+.messages {
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.greenbckg {
+  background-color: lightgreen;
+  float: right;
+}
+.whitebckg {
+  background-color: white;
+  float: left;
 }
