@@ -16,17 +16,15 @@ $(document).ready(function(){
 
   $('#button').click(function(){
     var researched = $('#cerca').val()
-    var string = $('#nome2').html();
-    console.log(string)
-    if (string.search(researched)>=0) {
-      $('#nome2').parent().parent().removeClass('noresult');
-      $('.noresult').hide();
-
+    for (var i = 1; i < 6; i++) {
+      num = i
+      var string = $('#' + num).html();
+      console.log(string)
+      if (string.search(researched)>=0) {
+        $('#' + num).parent().parent().removeClass('noresult');
+      }
     }
+    $('.noresult').hide();
   })
-
-
-
-
 
 });
