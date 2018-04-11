@@ -122,7 +122,9 @@ body {
   padding: 2px;
   min-width: 100px;
   max-width: 70%;
-  min-height: 50px;
+  min-height: 40px;
+  margin: 5px 10px;
+  font-family: Helvetica;
 }
 .clearfix {
   clear: both;
@@ -132,11 +134,11 @@ body {
   bottom: 0;
   right: 0;
 }
-.greenbckg {
+.rightgreen {
   background-color: lightgreen;
   float: right;
 }
-.whitebckg {
+.leftwhite {
   background-color: white;
   float: left;
 }
