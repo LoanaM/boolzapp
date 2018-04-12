@@ -107,6 +107,7 @@ body {
   border-bottom: 1px solid lightgrey;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .friendstripe img, .menu img {
   border-radius: 50%;
@@ -145,4 +146,8 @@ body {
 .leftwhite {
   background-color: white;
   float: left;
+}
+
+.messagescontainer {
+  display: none;
 }
