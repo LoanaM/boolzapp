@@ -41,7 +41,11 @@ body {
   justify-content: space-between;
 }
 .icons {
-  margin-right: 10px;
+  margin-right: 15px;
+  color: grey;
+}
+#lens {
+  cursor: pointer;
 }
 
 .footer {

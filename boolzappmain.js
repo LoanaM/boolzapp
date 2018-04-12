@@ -19,15 +19,17 @@ $(document).ready(function(){
     }
   });
 
-  $('#button').click(function(){
-    var researched = $('#cerca').val()
-    for (var i = 1; i < 7; i++) {
-      var string = $('#' + i).html();
-      if (string.search(researched)>=0) {
-        $('#' + i).parent().parent().removeClass('noresult');
+  $('#cerca').keypress(function(e){
+    if(e.which==13){
+      var researched = $('#cerca').val()
+      for (var i = 1; i < 7; i++) {
+        var string = $('#' + i).html();
+        if (string.search(researched)>=0) {
+          $('#' + i).parent().parent().removeClass('noresult');
+        }
       }
+      $('.noresult').hide();
     }
-    $('.noresult').hide();
-  })
+  });
 
 });
