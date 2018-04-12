@@ -20,9 +20,8 @@ $(document).ready(function(){
   });
 
   $('#cerca').keyup(function(){
-
       var researched = $('#cerca').val()
-      for (var i = 1; i < 7; i++) {
+      for (var i = 1; i < 8; i++) {
         var string = $('#' + i).html();
         if (string.search(researched)>=0) {
           $('#' + i).parent().parent().show();
@@ -31,9 +30,12 @@ $(document).ready(function(){
           $('#' + i).parent().parent().hide();
         }
       }
-
   });
 
-  $('.friendstripe')
+  $('.friendstripe').click(function(){
+    var morg = $(this).children().children('h3').html()
+    console.log(morg)
+    $('#' + morg).parent().addClass('display')
+  })
 
 });
