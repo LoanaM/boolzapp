@@ -33,6 +33,7 @@ $(document).ready(function(){
   });
 
   $('.friendstripe').click(function(){
+    $('.messagescontainer').removeClass('display')
     var morg = $(this).children().children('h3').html()
     console.log(morg)
     $('#' + morg).parent().addClass('display')
