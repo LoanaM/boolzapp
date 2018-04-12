@@ -21,7 +21,7 @@ $(document).ready(function(){
 
   $('#cerca').keyup(function(){
       var researched = $('#cerca').val()
-      for (var i = 1; i < 8; i++) {
+      for (var i = 1; i < 9; i++) {
         var string = $('#' + i).html();
         if (string.search(researched)>=0) {
           $('#' + i).parent().parent().show();
