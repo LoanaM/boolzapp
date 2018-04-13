@@ -41,8 +41,9 @@ $(document).ready(function(){
     $('#' + morg).parent().addClass('display')
   })
 
+//canello il messaggio selezionato
   $('.pulsante').click(function(){
-    $('.options').toggle()
+    $(this).siblings('.options').toggle()
   })
 
   $('.cancel').click(function(){
