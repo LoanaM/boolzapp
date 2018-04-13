@@ -6,12 +6,12 @@ $(document).ready(function(){
       var ora = new Date();
 
       if (NewMessage) {
-        $('.messagescontainer').append(
+        $('.display').append(
           '<div class="messages rightgreen">' + NewMessage + '<span class="time">' + ora.getHours() + ':' + ora.getMinutes() + '</span>' + '</div>' + '<div class="clearfix">' + '</div>'
         );
         $(this).val('');
         window.setTimeout(function(){
-          $('.messagescontainer').append(
+          $('.display').append(
             '<div class="messages leftwhite">' + 'Ok!' + '<span class="time">' + ora.getHours() + ':' + ora.getMinutes() + '</span>' + '</div>' + '<div class="clearfix">' + '</div>'
           );
         },1000);
@@ -19,6 +19,7 @@ $(document).ready(function(){
     }
   });
 
+//funzione che ricerca un contatto
   $('#cerca').keyup(function(){
       var researched = $('#cerca').val()
       for (var i = 1; i < 9; i++) {
@@ -32,11 +33,20 @@ $(document).ready(function(){
       }
   });
 
+//funzione che mostra solo la conversazione del contatto selezionato
   $('.friendstripe').click(function(){
     $('.messagescontainer').removeClass('display')
     var morg = $(this).children().children('h3').html()
     console.log(morg)
     $('#' + morg).parent().addClass('display')
+  })
+
+  $('.pulsante').click(function(){
+    $('.options').toggle()
+  })
+
+  $('.cancel').click(function(){
+    $(this).parent().parent().addClass('displaynone')
   })
 
 });

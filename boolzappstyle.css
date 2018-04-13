@@ -165,7 +165,31 @@ body {
 
 .messagescontainer {
   display: none;
+  overflow-y: scroll;
+  height: 480px;
 }
 .display {
   display: block;
+}
+.displaynone {
+  display: none;
+}
+
+.pulsante {
+  position: absolute;
+  right: 0;
+  top:0;
+  cursor: pointer;
+}
+.options {
+  background-color: pink;
+  width:150px;
+  height: 100px;
+  position: absolute;
+  top:15px;
+  right:0;
+  z-index: 1000;
+  font-size: 15px;
+  cursor: pointer;
+  display: none;
 }
