@@ -7,7 +7,8 @@ $(document).ready(function(){
 
       if (NewMessage) {
         $('.display').append(
-          '<div class="messages rightgreen">' + NewMessage + '<span class="time">' + ora.getHours() + ':' + ora.getMinutes() + '</span>' + '</div>' + '<div class="clearfix">' + '</div>'
+          '<div class="messages rightgreen">' + '<div class="pulsante">' + '<i class="fas fa-angle-down">' + '</i>' + '</div>' + '<div class="options">' + '<p>' + 'Info messaggio' + '</p>' + '<p class="cancel">' + 'Elimina messaggio' + '</p>' + '</div>' + '<br>' +
+          NewMessage + '<span class="time">' + ora.getHours() + ':' + ora.getMinutes() + '</span>' + '</div>' + '<div class="clearfix">' + '</div>'
         );
         $(this).val('');
         window.setTimeout(function(){
